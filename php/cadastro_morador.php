@@ -1,5 +1,5 @@
 <?php
-
+ require("conexao.php");
 
 
 $nome_completo = $_POST["nome"];
@@ -10,7 +10,7 @@ $data_nascimento  = $_POST["date"];
 $sexo = $_POST["sexo"];
 $fumante =  $_POST["fumante"];
 $pet = $_POST["pet"];
-$quant_pet = $_POST["q_pets"];
+$quant_pet = $_POST["qpets"];
 $vegano = $_POST["vegano"];
 $vegetariano  = $_POST["vegetariano"];
 $faculdade = $_POST["faculdade"];
@@ -40,13 +40,11 @@ echo  "<p>Sabe cozinhar?  ($cozinha)</p>";
 echo  "<p>e-mail:  ($email)</p>";*/
 
 
-require("conexao.php");
 
 
-$query = "INSERT INTO moradores (nome_completo, cpf, telefone, email, senha, data_nascimento, sexo, fumante, pet, quant_pet, vegano, vegetariano, faculdade, trabalho, tem_carro, tem_vel, cozinha, email) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
-$stmt = mysqli_prepare($mysqli, $query);
+$stmt = mysqli_prepare($mysqli, "INSERT INTO moradores (nome_completo, cpf, telefone, email, senha, data_nascimento, sexo, fumante, pet, quant_pet, vegano, vegetariano, faculdade, trabalho, tem_carro, tem_vel, cozinha) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
 
-mysqli_stmt_bind_param($stmt, "sssssiiiiis", $pnome_completo, $pcpf, $ptelefone, $pemail, $psenha, $pdata_nascimento, $psexo, $pfumante, $ppet, $pquant_pet, $pvegano, $pvegetariano, $pfaculdade, $ptrabalho, $ptem_carro, $ptem_vel, $pcozinha, $pemail);
+mysqli_stmt_bind_param($stmt, "sssssssiiiiissiii", $pnome_completo, $pcpf, $ptelefone, $pemail, $psenha, $pdata_nascimento, $psexo, $pfumante, $ppet, $pquant_pet, $pvegano, $pvegetariano, $pfaculdade, $ptrabalho, $ptem_carro, $ptem_vel, $pcozinha);
 
 
 
@@ -67,7 +65,7 @@ $ptrabalho = $trabalho;
 $ptem_carro = $tem_carro;
 $ptem_vel = $tem_vel;
 $pcozinha = $cozinha;
-$pemail =$email;
+$pemail   = $email;
 
 
 /* Execute the statement */

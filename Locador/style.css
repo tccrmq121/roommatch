@@ -838,3 +838,35 @@ body{
       margin-right: 0;
     }
   }
+
+
+  
+  
+  @media (max-width: 575.98px) {
+
+    .contact-pop .content {
+
+      padding-bottom: 170% ;
+      margin-top: 10%;
+
+
+
+
+    }
+
+    #foto_perfil_imovel{
+
+      font-size: small;
+    }
+
+    
+    
+
+
+    
+
+
+    
+    
+    
+     }

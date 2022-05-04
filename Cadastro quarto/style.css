@@ -843,4 +843,15 @@ body{
   {
     #dd{width:calc 80% max-content} 
   }
+
+  @media (max-width: 575.98px) {
+
+    .contact-pop .content {
+
+      padding-bottom: 110% ;
+      margin-top: 10%;
+    }
+  }
+
+  
   
