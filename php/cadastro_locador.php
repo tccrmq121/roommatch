@@ -71,7 +71,9 @@
  /* Execute the statement */
  mysqli_stmt_execute($stmt);
 
-$last_id = mysqli_insert_id($mysqli)
+$last_id = mysqli_insert_id($mysqli);
+
+header('location: ../Cadastro imovel/index.html')
 
 
 

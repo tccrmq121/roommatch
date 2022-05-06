@@ -12,8 +12,8 @@ $db = 'id18773164_roommatch';
 $mysqli = mysqli_connect($localhost, $user, $password, $db);
 
 /* Set the desired charset after establishing a connection */
-mysqli_set_charset($mysqli, 'utf8mb4');
+mysqli_set_charset($mysqli, 'utf8mb4')
 
-printf("Success... %s\n", mysqli_get_host_info($mysqli));
+/*printf("Success... %s\n", mysqli_get_host_info($mysqli));*/
 
 ?>
