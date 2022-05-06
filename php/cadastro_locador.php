@@ -73,7 +73,7 @@
 
 $last_id = mysqli_insert_id($mysqli);
 
-header('location: ../Cadastro imovel/index.html')
+header('location: ../Cadastro imovel/index.html?id=$last_id')
 
 
 
