@@ -3,12 +3,12 @@
 
     if ((cep.value).length < 10){
         alert("CEP Incompleto");
-        nome.focus();
+        cep.focus();
         return false
         }
     if (cep.value == ''){
         alert("Preencha o CEP");
-        cpf.focus();
+        cep.focus();
         return false
     }
 

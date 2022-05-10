@@ -52,7 +52,7 @@ $pcidade = $cidade;
 $pestado = $estado;
 $pquartos = $quartos;
 $ptamanho_casa = $tamanho_casa;
-$pvalor_aluguel = $pvalor_aluguel;
+$pvalor_aluguel = $valor_aluguel;
 $pnegociavel  = $negociavel;
 $pdescricao = $descricao;
 $papartamento_ou_casa = $apartamento_ou_casa;
@@ -69,7 +69,9 @@ mysqli_stmt_execute($stmt);
 
 $last_id2 = mysqli_insert_id($mysqli);
 
-header('location: ../Cadastro quarto/index.html?id=$last_id2')
+header('location: ../Cadastro quarto/index.html?id=$last_id2');
+
+
 
 
 
