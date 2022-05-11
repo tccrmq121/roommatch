@@ -61,7 +61,8 @@
         <!-- Início do formulário -->
         <form enctype="multipart/form-data" action="../php/cadastro_estab.php" method="POST">
 
-            <input type="hidden" name="id" value="<?php $_GET['id']?>">
+            <?php $idloc = $_GET['id']; ?>
+            <input type="hidden" name="ide" id="ide" value=<?php echo $idloc; ?>>
             
 
             <div class="row">
@@ -163,7 +164,7 @@
     
             <div class="col-md-6 mb-3">
                     <label for="apartamento_ou_casa"><strong>Apartamento ou Casa</strong></label>
-                    <select name="Apartamento_ou_casa" id="Apartamento_ou_casa" class="form-control"  required>
+                    <select name="apartamento_ou_casa" id="apartamento_ou_casa" class="form-control"  required>
                     <option value=0>Apartamento</option>
                     <option value=1>Casa</option>
                     </select>
@@ -172,14 +173,19 @@
         </div>
 
         <div class="row">
-            <div class="col-md-6 mb-3">
+            <div class="col-md-4 mb-3">
                     <label for="comodos"><strong>Comodos</strong></label>
-                    <input type="number" name="comodos" id="comodos" class="form-control"  required  placeholder="Digite a quantidade de quartos">
+                    <input type="number" name="comodos" id="comodos" class="form-control"  required  placeholder="Digite a quantidade de comodos">
             </div>
     
-            <div class="col-md-6 mb-3">
+            <div class="col-md-4 mb-3">
                 <label for="banheiros"><strong>Banheiros</strong></label>
                 <input type="number" name="banheiros" id="banheiros" class="form-control"  maxlength="500" required  placeholder="Digite a quantidade de banheiros">
+            </div>
+
+            <div class="col-md-4 mb-3">
+                    <label for="quartos"><strong>Quartos</strong></label>
+                    <input type="number" name="quartos" id="quartos" class="form-control"  required  placeholder="Digite a quantidade de quartos">
             </div>
 
         </div>
@@ -187,7 +193,7 @@
         <div class="row">
             <div class="col-md-4 mb-3">
                 <label for="lavanderia"><strong>Lavanderia</strong></label>
-                <input type="number" name="banheiros" id="banheiros" class="form-control"  min=0 required  placeholder="Quantidade lavanderias">
+                <input type="number" name="lavanderia" id="lavanderia" class="form-control"  min=0 required  placeholder="Quantidade lavanderias">
             </div>
 
             <div class="col-md-4 mb-3">
