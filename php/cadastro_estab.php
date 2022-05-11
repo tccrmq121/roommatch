@@ -37,12 +37,42 @@ $vagas_carro = $_POST["vagas_carro"];
 $internet = $_POST["internet"];
 /*$imagem*/
 $descricao = $_POST["descricao"];
-$id_locador = $_GET[$last_id];
+$id_locador = intval($_POST["ide"]);
+
+/*
+echo "<p>1 $cep</p>";
+echo "<p>2 $endereco </p>";
+echo "<p>3 $complemento</p>";
+echo "<p>4 $bairro</p>";
+echo "<p>5 $cidade</p>";
+echo "<p>6 $estado</p>";
+echo "<p>7 $banheiros</p>";
+echo "<p>8 $tamanho_casa</p>";
+echo "<p>9 $valor_aluguel</p>";
+echo "<p>10 $negociavel</p>";
+echo "<p>11 $apartamento_ou_casa</p>";
+echo "<p>12 $comodos</p>";
+echo "<p>13 $quartos</p>";
+echo "<p>14 $lavanderia</p>";
+echo "<p>15 $vagas_carro</p>";
+echo "<p>16 $internet</p>";
+echo "<p>17 $imagem</p>";
+echo "<p>18 $descricao</p>";
+echo "<p>19 $id_locador</p>";*/
+
+
+
+
+
+
+
+
+
 
 
 $stmt = mysqli_prepare($mysqli, "INSERT INTO estabelecimentos (CEP, endereco, complemento, bairro, cidade, estado, quartos, tamanho_casa, valor, negociavel, descricao, ap_ou_casa, vagas_carro, comodos, banheiros, lavanderia, internet, id_locador, foto_perfil_casa) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
  
-mysqli_stmt_bind_param($stmt, "ssssssiiiisiiiiiiss", $pcep, $pendereco, $pcomplemento, $pbairro, $pcidade, $pestado, $pquartos, $ptamanho_casa, $pvalor_aluguel, $pnegociavel , $pdescricao, $papartamento_ou_casa, $pvagas_carro, $pcomodos, $pbanheiros, $plavanderia, $pinternet, $pidl, $pfoto);
+mysqli_stmt_bind_param($stmt,"ssssssiiiisiiiiiiis", $pcep, $pendereco, $pcomplemento, $pbairro, $pcidade, $pestado, $pquartos, $ptamanho_casa, $pvalor_aluguel, $pnegociavel , $pdescricao, $papartamento_ou_casa, $pvagas_carro, $pcomodos, $pbanheiros, $plavanderia, $pinternet, $pidl, $pfoto);
 
 $pcep = $cep;
 $pendereco = $endereco;
@@ -65,11 +95,12 @@ $pidl = $id_locador;
 $pfoto = $imagem;
 
 /* Execute the statement */
+
 mysqli_stmt_execute($stmt);
 
 $last_id2 = mysqli_insert_id($mysqli);
 
-header('location: ../Cadastro quarto/index.html?id=$last_id2');
+header('location: ../Cadastro quarto/index.php?id2='.$last_id2);
 
 
 

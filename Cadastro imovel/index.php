@@ -51,7 +51,6 @@
                 <div class="content">
                     <div> 
 
-
         <!-- Cabeçalho com título e subtítulo (ambos com css de id "titulo") -->
         <div class="text-center">
             <img class="mw-100" src="img/lo.png" alt="logo">
@@ -61,6 +60,10 @@
 
         <!-- Início do formulário -->
         <form enctype="multipart/form-data" action="../php/cadastro_estab.php" method="POST">
+
+            <?php $idloc = $_GET['id']; ?>
+            <input type="hidden" name="ide" id="ide" value=<?php echo $idloc; ?>>
+            
 
             <div class="row">
                 <!-- Campo do endereço com legenda "endereço" e css de classe "campo" -->
@@ -170,19 +173,19 @@
         </div>
 
         <div class="row">
-            <div class="col-md-6 mb-3">
+            <div class="col-md-4 mb-3">
                     <label for="comodos"><strong>Comodos</strong></label>
                     <input type="number" name="comodos" id="comodos" class="form-control"  required  placeholder="Digite a quantidade de comodos">
             </div>
-
-            <div class="col-md-6 mb-3">
-                <label for="quartos"><strong>Quartos</strong></label>
-                <input type="number" name="quartos" id="quartos" class="form-control"  required  placeholder="Digite a quantidade de quartos">
-            </div>
     
-            <div class="col-md-6 mb-3">
+            <div class="col-md-4 mb-3">
                 <label for="banheiros"><strong>Banheiros</strong></label>
                 <input type="number" name="banheiros" id="banheiros" class="form-control"  maxlength="500" required  placeholder="Digite a quantidade de banheiros">
+            </div>
+
+            <div class="col-md-4 mb-3">
+                    <label for="quartos"><strong>Quartos</strong></label>
+                    <input type="number" name="quartos" id="quartos" class="form-control"  required  placeholder="Digite a quantidade de quartos">
             </div>
 
         </div>

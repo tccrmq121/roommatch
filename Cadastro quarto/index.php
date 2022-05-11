@@ -61,7 +61,9 @@
                         </div>
                 
                         <!-- Início do formulário -->
-                        <form action="cadastro_morador.php" method="POST">
+                        <form action="cadastro_quarto.php" method="POST">
+
+                        <input type="hidden" name="id2" value="<?php $_GET['id2']?>">
                 
                             <div class="row">
                                 
@@ -121,6 +123,9 @@
                                     
                                 </div>
                                 </fieldset>
+                        </form>
+
+                        <script src="validacao.js"></script>
    
 
     
