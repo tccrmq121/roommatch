@@ -61,6 +61,9 @@
         <!-- Início do formulário -->
         <form enctype="multipart/form-data" action="../php/cadastro_estab.php" method="POST">
 
+            <input type="hidden" name="id" value="<?php $_GET['id']?>">
+            
+
             <div class="row">
                 <!-- Campo do endereço com legenda "endereço" e css de classe "campo" -->
                 
