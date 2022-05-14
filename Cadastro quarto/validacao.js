@@ -1,21 +1,10 @@
  function valida(){
-    cep =(document.getElementById('cep'));
-
-    if ((cep.value).length < 10){
-        alert("CEP Incompleto");
-        nome.focus();
-        return false
-        }
-    if (cep.value == ''){
-        alert("Preencha o CEP");
-        cpf.focus();
-        return false
-    }
-
     
     var fileInput =  document.getElementById('foto_perfil_imovel');
           
     var filePath = fileInput.value;
+
+    if (fileInput != ''){
       
     // Permitir tipo de arquivo
         var allowedExtensions = 
@@ -26,5 +15,6 @@
             fileInput.value = '';
             return false
         }
+    }
     
  }

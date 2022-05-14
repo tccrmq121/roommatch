@@ -61,18 +61,23 @@
                         </div>
                 
                         <!-- Início do formulário -->
-                        <form action="cadastro_quarto.php" method="POST">
+                        <form enctype="multipart/form-data" action="../php/cadastro_quarto.php" method="POST">
 
-                        <input type="hidden" name="id2" value="<?php $_GET['id2']?>">
+                        
+
+                        <?php $idloc2 = $_GET['id2']; ?>
+                        <input type="hidden" name="ide2" id="ide2" value=<?php echo $idloc2; ?>>
+
+                        
                 
                             <div class="row">
                                 
                                 <div class="col-md-6 mb-3">
-                                    <label for="Tamanho"><strong>Tamanho do Quarto(m<sup>2</sup>) </strong></label>
+                                    <label for="tamanho"><strong>Tamanho do Quarto(m<sup>2</sup>) </strong></label>
                                     <input type="number" step="0.5" name="tamanho" class="form-control" id="tamanho" min=0 maxlength=100 required  placeholder="Digite o tamanho do quarto">
                                     </div><div class="col-md-6 mb-3">
                                         <label for="mobiliado"><strong>Mobiliado </strong></label>
-                                        <select name="mobiliado" class="form-control id="mobiliado  maxlength=100 required>
+                                        <select name="mobiliado"id="mobiliado"  class="form-control maxlength=100" required>
                                         <option value=0>Não</option>
                                         <option value=1>Sim</option>
                                         </select>
@@ -88,14 +93,14 @@
                                     </div>
                                 
                                     <div class="col-md-6 mb-3" >
-                                        <label for="Quantidade_tomada"><strong>Quantidade de Tomadas </strong></label>
+                                        <label for="quantidade_tomada"><strong>Quantidade de Tomadas </strong></label>
                                         <input type="number" name="quantidade-tomada"  class="form-control" id="quantidade-tomada" min=0 maxlength=100 required placeholder="Quantidade de tomadas">
                                     </div>
                                     
                                     
                         
                                         <div class="col-md-6 mb-3">
-                                        <label for="Valor"><strong>Valor aluguel </strong></label>
+                                        <label for="valor"><strong>Valor aluguel </strong></label>
                                         <input type="number" step="0.5" name="valor" class="form-control" id="valor" min=0 maxlength=100 required placeholder="Qual o valor do aluguel">
                                     
                         
@@ -106,12 +111,12 @@
                         
                                 <div class="col-md-12 mb-3" id="dd">
                                     <label for="descricao"><strong>Descrição </strong></label>
-                                       <textarea cols="50" rows="5" maxlength="500" input name="descricao" id="descricao" class="form-control maxlength=100 placeholder="Digite aqui a descrição do imóvel:></textarea> 
+                                       <textarea cols="50" rows="5" maxlength="500" input name="descricao" id="descricao"  class="form-control"  placeholder="Digite aqui a descrição do imóvel:"></textarea> 
                                     </div>
                                 </div>
                                 <div class="col-md-6 mb-3" id="tt">
                                     <label for="foto_perfil_quarto"><strong>Foto do Quarto </strong></label>
-                                    <input type="file" name="foto-quarto"  id="foto-quarto" maxlength=100>
+                                    <input type="file" name="foto_perfil_quarto"  id="foto_perfil_quarto">
                     
                                 </div>
     

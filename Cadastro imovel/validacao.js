@@ -13,6 +13,7 @@
         cep.focus();
         return false
     }
+    
     if (fileInput != ""){
 
         // Permitir tipo de arquivo
