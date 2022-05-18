@@ -14,7 +14,7 @@
         return false
     }
     
-    if (fileInput != ""){
+    if (fileInput != null){
 
         // Permitir tipo de arquivo
         var allowedExtensions = 

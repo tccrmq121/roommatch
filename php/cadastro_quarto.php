@@ -26,6 +26,7 @@ $tom = $_POST["quantidade-tomada"];
 $valor = $_POST["valor"];
 $desc = $_POST["descricao"];
 $id2 = $_POST["ide2"];
+$neg = $_POST["negociavel"];
 /*imagem*/
 
 /*
@@ -59,9 +60,9 @@ echo "<p>19 $id_locador</p>";*/
 
 
 
-$stmt = mysqli_prepare($mysqli, "INSERT INTO quartos (tamanho_quarto, valor, mobiliado, descricao, quantidade_tomada, arcondicionado, id_estab, foto_perfil_quarto ) VALUES (?,?,?,?,?,?,?,?)");
+$stmt = mysqli_prepare($mysqli, "INSERT INTO quartos (tamanho_quarto, valor, mobiliado, descricao, quantidade_tomada, arcondicionado, id_estab, foto_perfil_quarto, negociavel ) VALUES (?,?,?,?,?,?,?,?,?)");
  
-mysqli_stmt_bind_param($stmt,"iiisiiis", $ptamanho, $pvalor, $pmob, $pdesc, $ptom, $parc, $pid2, $pimagem2);
+mysqli_stmt_bind_param($stmt,"iiisiiisi", $ptamanho, $pvalor, $pmob, $pdesc, $ptom, $parc, $pid2, $pimagem2, $pneg);
 
 $ptamanho = $caminho;
 $pvalor = $valor;
@@ -71,6 +72,8 @@ $ptom = $tom;
 $parc = $arc; 
 $pid2 = $id2; 
 $pimagem2 = $imagem2;
+$pneg = $neg;
+
 
 
 

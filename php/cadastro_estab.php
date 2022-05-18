@@ -27,8 +27,6 @@ $cidade = $_POST["cidade"];
 $estado = $_POST["estado"];
 $banheiros = $_POST["banheiros"];
 $tamanho_casa = $_POST["tamanho_casa"];
-$valor_aluguel= $_POST["valor_aluguel"];
-$negociavel = $_POST["negociavel"];
 $apartamento_ou_casa = $_POST["apartamento_ou_casa"];
 $comodos= $_POST["comodos"];
 $quartos= $_POST["quartos"];
@@ -70,9 +68,9 @@ echo "<p>19 $id_locador</p>";*/
 
 
 
-$stmt = mysqli_prepare($mysqli, "INSERT INTO estabelecimentos (CEP, endereco, complemento, bairro, cidade, estado, quartos, tamanho_casa, valor, negociavel, descricao, ap_ou_casa, vagas_carro, comodos, banheiros, lavanderia, internet, id_locador, foto_perfil_casa) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
+$stmt = mysqli_prepare($mysqli, "INSERT INTO estabelecimentos (CEP, endereco, complemento, bairro, cidade, estado, quartos, tamanho_casa, descricao, ap_ou_casa, vagas_carro, comodos, banheiros, lavanderia, internet, id_locador, foto_perfil_casa) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
  
-mysqli_stmt_bind_param($stmt,"ssssssiiiisiiiiiiis", $pcep, $pendereco, $pcomplemento, $pbairro, $pcidade, $pestado, $pquartos, $ptamanho_casa, $pvalor_aluguel, $pnegociavel , $pdescricao, $papartamento_ou_casa, $pvagas_carro, $pcomodos, $pbanheiros, $plavanderia, $pinternet, $pidl, $pfoto);
+mysqli_stmt_bind_param($stmt,"ssssssiisiiiiiiis", $pcep, $pendereco, $pcomplemento, $pbairro, $pcidade, $pestado, $pquartos, $ptamanho_casa, $pdescricao, $papartamento_ou_casa, $pvagas_carro, $pcomodos, $pbanheiros, $plavanderia, $pinternet, $pidl, $pfoto);
 
 $pcep = $cep;
 $pendereco = $endereco;
@@ -82,8 +80,6 @@ $pcidade = $cidade;
 $pestado = $estado;
 $pquartos = $quartos;
 $ptamanho_casa = $tamanho_casa;
-$pvalor_aluguel = $valor_aluguel;
-$pnegociavel  = $negociavel;
 $pdescricao = $descricao;
 $papartamento_ou_casa = $apartamento_ou_casa;
 $pvagas_carro = $vagas_carro;

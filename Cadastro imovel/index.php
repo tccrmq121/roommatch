@@ -8,9 +8,9 @@
     
         <!-- CSS -->
         <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="../cs/global.css">
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" type="text/css" href="style.css" media="screen">
+        <link rel="stylesheet" href="../cs/global.css">
         <!--Scripts Jquery para máscaras-->
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
@@ -70,7 +70,7 @@
                 
                 <div class="col-md-6 mb-3">
                     <label for="cep"><strong>CEP</strong></label>
-                    <input type="text" name="cep" id="cep" class="form-control"   onkeypress="$(this).mask('00.000-000')" maxlength=9  required placeholder="Digite Seu CEP">
+                    <input type="text" name="cep" id="cep" class="form-control"   onkeypress="$(this).mask('00.000-000')" maxlength=10  required placeholder="Digite Seu CEP">
                 </div>
                 <div class="col-md-6 mb-3">
                     <label for="endereco"><strong>Endereço com número </strong></label>
@@ -145,22 +145,6 @@
                 <label for="tamanho_casa"><strong>Tamanho da casa (m<sup>2</sup>)</strong></label>
                 <input type="number" step="0.05" name="tamanho_casa" id="tamanho_casa" class="form-control"  min=0 required  placeholder="Digite o tamanho da casa">
             </div>
-
-            <div class="col-md-6 mb-3">
-                <label for="valor_aluguel"><strong>Valor aluguel (R$)</strong></label>
-                <input type="number" step="0.05" name="valor_aluguel" id="valor_aluguel" class="form-control"  min="0" required  placeholder="Digite o valor do aluguel">
-            </div>
-
-        </div>
-
-        <div class="row">
-            <div class="col-md-6 mb-3">
-                    <label for="negociavel"><strong>Valor negociável?</strong></label>
-                    <select name="negociavel" id="negociavel" class="form-control"  required>
-                    <option value=0>Não</option>
-                    <option value=1>SiM</option>
-                    </select>
-            </div>
     
             <div class="col-md-6 mb-3">
                     <label for="apartamento_ou_casa"><strong>Apartamento ou Casa</strong></label>
@@ -173,35 +157,39 @@
         </div>
 
         <div class="row">
-            <div class="col-md-4 mb-3">
+            <div class="col-md-6 mb-3">
                     <label for="comodos"><strong>Comodos</strong></label>
                     <input type="number" name="comodos" id="comodos" class="form-control"  required  placeholder="Digite a quantidade de comodos">
             </div>
     
-            <div class="col-md-4 mb-3">
+            <div class="col-md-6 mb-3">
                 <label for="banheiros"><strong>Banheiros</strong></label>
                 <input type="number" name="banheiros" id="banheiros" class="form-control"  maxlength="500" required  placeholder="Digite a quantidade de banheiros">
             </div>
 
-            <div class="col-md-4 mb-3">
-                    <label for="quartos"><strong>Quartos</strong></label>
-                    <input type="number" name="quartos" id="quartos" class="form-control"  required  placeholder="Digite a quantidade de quartos">
-            </div>
+         
 
         </div>
 
         <div class="row">
-            <div class="col-md-4 mb-3">
+            <div class="col-md-6 mb-3">
                 <label for="lavanderia"><strong>Lavanderia</strong></label>
                 <input type="number" name="lavanderia" id="lavanderia" class="form-control"  min=0 required  placeholder="Quantidade lavanderias">
             </div>
 
-            <div class="col-md-4 mb-3">
+            <div class="col-md-6 mb-3">
                 <label for="vagas_carro"><strong>Vagas de carro</strong></label>
                 <input type="number" name="vagas_carro" id="vagas_carro" class="form-control"  min=0 required  placeholder="Quantidade vagas">
             </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                    <label for="quartos"><strong>Quartos</strong></label>
+                    <input type="number" name="quartos" id="quartos" class="form-control"  required  placeholder="Digite a quantidade de quartos">
+            </div>
             
-            <div class="col-md-4 mb-3">
+            <div class="col-md-6 mb-3">
                 <label for="internet"><strong>Internet</strong></label>
                 <select id="internet" name="internet" class="form-control"  required>
                     <option selected disabled value="">Selecione</option>
@@ -209,11 +197,7 @@
                     <option value=1>Sim</option>
                   </select>
             </div>
-            
-
-        </div>
-
-        
+   
                 
          <div class="row">
             <div class="col-md-12 mb-3">
@@ -221,22 +205,22 @@
                 <textarea cols="50" rows="5" maxlength="500" input name="descricao" class="form-control"  id="descricao"  placeholder="Digite aqui a descrição do imóvel:"></textarea> 
             </div>
        
+            
+                <div class="col-md-6 mb-3" id="tt">
+                    <label for="foto_perfil_imovel"><strong>Foto do imóvel</strong></label>
+                    <input type="file" name="foto_perfil_imovel"  id="foto_perfil_imovel" maxlength=100>
+                </div>
+            
         
-            <div class="col-md-6 mb-3" id="tt">
-            <label for="foto_perfil_imovel"><strong>Foto do imovél</strong></label>
-            <input type="file" name="foto_perfil_imovel"  id="foto_perfil_imovel" maxlength=100>
 
+        
+            <div class="col-md-12 mb-3">
+                <button class="botao" type="submit" onclick="return valida()" id="bota">Concluído</button>  
             </div>
-    </div>
-
+        
 
                 
-                    <div class="row">
-                        <div class="col-md-12 mb-3">
-                    <button class="botao" type="submit" onclick="return valida()" id="bota">Concluído</button>  
-                </div>
-                    </div>
-
+                    
 <!--                     
                     <div class="campo">
                         <div class="campo">

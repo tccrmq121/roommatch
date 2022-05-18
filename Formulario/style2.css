@@ -1,0 +1,7 @@
+.contact-pop .content {
+    height: 75%;
+    background: #0000004d;
+    border-radius: 25px;
+    backdrop-filter: blur(10px); 
+    box-shadow: 30px 30px 30px #000000f9;
+  }
