@@ -82,7 +82,7 @@ $pneg = $neg;
 mysqli_stmt_execute($stmt);
 
 
-header('location: ../feed/index.html');
+header('location: ../feed/index-loc.php');
 
 
 

@@ -103,7 +103,7 @@
                                     
                                         <div class="row">
                                         <div class="col-md-6 mb-3">
-                                        <label for="valor"><strong>Valor aluguel </strong></label>
+                                        <label for="valor"><strong>Valor aluguel (R$) </strong></label>
                                         <input type="number" step="0.5" name="valor" class="form-control" id="valor" min=0 maxlength=100 required placeholder="Qual o valor do aluguel">
                                         </div>
 
