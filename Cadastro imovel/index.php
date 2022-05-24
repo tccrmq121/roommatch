@@ -197,6 +197,16 @@
                     <option value=1>Sim</option>
                   </select>
             </div>
+
+            <div class="row">
+            <div class="col-md-6 mb-3">
+                <label for="apet"><strong>Aceita Pets?</strong></label>
+                <select id="apet" name="apet" class="form-control"  required>
+                    <option selected disabled value="">Selecione</option>
+                    <option value=0>Não</option>
+                    <option value=1>Sim</option>
+                  </select>
+            </div>
    
                 
          <div class="row">

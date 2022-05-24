@@ -1,3 +1,25 @@
+<?php
+
+include('../protect.php');
+
+
+require('../conexao.php');
+$idloc2 = $_SESSION['id_morador'];
+
+$query = 'SELECT id_morador, nome_completo, cpf, telefone, email, senha, data_nascimento, quant_pet, faculdade, trabalho FROM moradores WHERE id_morador = '.$idloc2; 
+$result = mysqli_query($mysqli, $query);
+
+$row = mysqli_fetch_row($result);
+
+
+
+
+
+?>
+
+
+
+
 <!doctype html>
 <html>
 
@@ -12,6 +34,7 @@
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" type="text/css" href="style.css" media="screen">
         <link rel="stylesheet" href="style2.css">
+        <link rel="stylesheet" href="../../cs/global.css">
 
              <!--Scripts Jquery para máscaras-->
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
@@ -48,18 +71,20 @@
         </div>
 
         <!-- Início do formulário -->
-        <form action="../php/cadastro_morador.php" method="POST">
+        <form action="umor.php" method="POST">
+
+        <input type="hidden" name="idloc" id="idloc" value="<?php echo $row[0]; ?>">
 
             <div class="row">
                 
                 <div class="col-md-6 mb-3">
                     <label for="nome"><strong>Nome Completo </strong></label>
-                    <input type="text" name="nome" id="nome" maxlength=100 required class="form-control"  placeholder="Digite Seu nome completo">
+                    <input type="text" name="nome" id="nome" maxlength=100 required class="form-control"  placeholder="Digite Seu nome completo" value="<?php echo $row[1]; ?>">
                 </div>
         
                 <div class="col-md-6 mb-3">
                     <label for="cpf"><strong>CPF</strong></label>
-                    <input type="text" name="cpf" id="cpf" onkeypress="$(this).mask('000.000.000-00');" class="form-control" maxlength=14 required  placeholder="Digite Seu CPF">
+                    <input type="text" name="cpf" id="cpf" onkeypress="$(this).mask('000.000.000-00');" class="form-control" maxlength=14 required  placeholder="Digite Seu CPF"value="<?php echo $row[2]; ?>">
                 </div>
             </div>
 
@@ -68,12 +93,12 @@
             <div class="row">
                  <div class="col-md-6 mb-3">
                 <label for="Telefone"><strong>Telefone</strong></label>
-                <input type="tel" name="telefone" id="telefone" maxlength=15 class="form-control"  onkeypress="$(this).mask('(00) 0000-00009')"  required placeholder="Digite Seu telefone">
+                <input type="tel" name="telefone" id="telefone" maxlength=15 class="form-control"  onkeypress="$(this).mask('(00) 0000-00009')"  required placeholder="Digite Seu telefone" value="<?php echo $row[3]; ?>">
                 </div>
 
                 <div class="col-md-6 mb-3">
                 <label for="email"><strong>Email</strong></label>
-                <input type="email" name="email" id="email" maxlength=100 class="form-control"  required placeholder="Digite Seu e-mail">
+                <input type="email" name="email" id="email" maxlength=100 class="form-control"  required placeholder="Digite Seu e-mail"value="<?php echo $row[4]; ?>">
                 </div>
             </div> 
             
@@ -83,12 +108,12 @@
                  <div class="row">
                     <div class="col-md-6 mb-3">
                     <label for="password"><strong>Senha</strong></label>
-                    <input type="password" name="password" id="password" class="form-control" maxlength=12 required placeholder="Digite Sua senha">
+                    <input type="password" name="password" id="password" class="form-control" maxlength=12 required placeholder="Digite Sua senha" value="<?php echo $row[5]; ?>">
                     </div>
 
                     <div class="col-md-6 mb-3">
                     <label for="password2"><strong>Confirmação Da Senha</strong></label>
-                    <input type="password" name="password" id="password2"  class="form-control" maxlength=12 required placeholder="Digite novamente Sua senha">
+                    <input type="password" name="password" id="password2"  class="form-control" maxlength=12 required placeholder="Digite novamente Sua senha" value="<?php echo $row[5]; ?>">
                 </div>
                 </div>
                
@@ -96,14 +121,14 @@
                 <div class="row">
                     <div class="col-md-6 mb-3">
                     <label for="date"><strong>Data De Nascimento</strong></label>
-                    <input type="date" name="date" id="date" class="form-control" required placeholder="Digite Sua data de nascimento">
+                    <input type="date" name="date" id="date" class="form-control" required placeholder="Digite Sua data de nascimento" value="<?php echo $row[6]; ?>">
                 </div>
             
                 
                 <div class="col-md-6 mb-3">
                         <label for="sexo"><strong>Sexo</strong></label>
                         <select id="sexo" name="sexo" class="form-control" required>
-                          <option  >Selecione</option>
+                          <option selected disabled value="">Selecione</option>
                           <option value="m">Masculino</option>
                           <option value="f" >Feminino</option>
                           <option value="n" >Prefiro não responder</option>
@@ -115,10 +140,6 @@
                   
                 
          
-                    
-                    
-       
-
         
                 <div class="row">
                <div class="col-md-6 mb-3">
@@ -131,8 +152,8 @@
                 </select>
             </div>
             <div class="col-md-6 mb-3">
-                <label for="number"><strong>Quantidade De Pets</strong></label>
-                <input type="number" name="qpets"  class="form-control" id="number" min=0 placeholder="Quantidade de Pets">
+                <label for="qpets"><strong>Quantidade De Pets</strong></label>
+                <input type="number" name="qpets"  class="form-control" id="qpets" min=0 placeholder="Quantidade de Pets" value="<?php echo $row[7]; ?>">
             </div>
             </div>
            
@@ -172,12 +193,12 @@
                 <div class="row">
                     <div class="col-md-6 mb-3">
                     <label for="faculdade"><strong>Faculdade/Estudos</strong></label>
-                    <input type="text" name="faculdade"  class="form-control" id="faculdade" placeholder="Digite onde você estuda">
+                    <input type="text" name="faculdade"  class="form-control" id="faculdade" placeholder="Digite onde você estuda" value="<?php echo $row[8]; ?>">
                 </div>
     
                 <div class="col-md-6 mb-3">
                     <label for="text"><strong>Onde Trabalha?</strong></label>
-                    <input type="text" name="trabalho"  class="form-control" id="trabalho"  placeholder="Empresa onde você trabalha">
+                    <input type="text" name="trabalho"  class="form-control" id="trabalho"  placeholder="Empresa onde você trabalha" value="<?php echo $row[9]; ?>">
                 </div>
                 </fieldset>
 

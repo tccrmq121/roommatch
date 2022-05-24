@@ -62,7 +62,7 @@ echo "<p>19 $id_locador</p>";*/
 
 $stmt = mysqli_prepare($mysqli, "INSERT INTO quartos (tamanho_quarto, valor, mobiliado, descricao, quantidade_tomada, arcondicionado, id_estab, foto_perfil_quarto, negociavel ) VALUES (?,?,?,?,?,?,?,?,?)");
  
-mysqli_stmt_bind_param($stmt,"iiisiiisi", $ptamanho, $pvalor, $pmob, $pdesc, $ptom, $parc, $pid2, $pimagem2, $pneg);
+mysqli_stmt_bind_param($stmt,"ddisiiisi", $ptamanho, $pvalor, $pmob, $pdesc, $ptom, $parc, $pid2, $pimagem2, $pneg);
 
 $ptamanho = $caminho;
 $pvalor = $valor;
@@ -82,7 +82,7 @@ $pneg = $neg;
 mysqli_stmt_execute($stmt);
 
 
-header('location: ../feed/index-loc.php');
+header('location: ../index.php');
 
 
 
