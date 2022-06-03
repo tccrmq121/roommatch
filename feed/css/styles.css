@@ -23972,6 +23972,7 @@ header.masthead .masthead-heading {
 .portfolio-modal .modal-content h2, .portfolio-modal .modal-content .h2 {
   font-size: 3rem;
   line-height: 3rem;
+  word-wrap:  break-word;
 }
 .portfolio-modal .modal-content p.item-intro {
   font-style: italic;
@@ -24917,6 +24918,7 @@ p{
   #descr{
 
     text-align: center;
+    word-wrap:  break-word;
 
 
   }
@@ -24926,3 +24928,12 @@ p{
     height: 300px;
     object-fit: cover;
 }
+
+/* #imgbar{
+
+
+  height: 300px;
+  width: 500px;
+
+
+} */

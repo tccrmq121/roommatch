@@ -19,7 +19,7 @@ if(isset($_FILES['foto_perfil_quarto'])) { /*Verifica se um arquivo foi enviado*
 
 
 
-$tamanho = $_POST["tamanho"];
+$tamanho = $_POST["tamanho"]; 
 $mob = $_POST["mobiliado"];
 $arc = $_POST["arcondicionado"];
 $tom = $_POST["quantidade-tomada"];
@@ -64,7 +64,7 @@ $stmt = mysqli_prepare($mysqli, "INSERT INTO quartos (tamanho_quarto, valor, mob
  
 mysqli_stmt_bind_param($stmt,"ddisiiisi", $ptamanho, $pvalor, $pmob, $pdesc, $ptom, $parc, $pid2, $pimagem2, $pneg);
 
-$ptamanho = $caminho;
+$ptamanho = $tamanho;
 $pvalor = $valor;
 $pmob = $mob;
 $pdesc = $desc; 

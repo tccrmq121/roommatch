@@ -1,0 +1,7 @@
+else para foto
+
+
+else {
+
+    $imagem = $_POST['manter-foto']
+}

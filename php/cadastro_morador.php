@@ -69,7 +69,9 @@ $pemail   = $email;
 
 
 /* Execute the statement */
-mysqli_stmt_execute($stmt)
+mysqli_stmt_execute($stmt);
+
+header('location: ../index.php');
 
 
 
