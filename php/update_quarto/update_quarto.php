@@ -54,21 +54,22 @@ $row2 = mysqli_fetch_row($result2);
         <title>Cadastro de Quarto</title>
     </head>
     <header>
-        <!-- <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
-            <div class="container"> -->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+            <div class="container">
                 <!-- <a class="navbar-brand" href="#page-top"><img src="assets/img/navbar-logo.svg" alt="..." /></a> -->
-                <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="fas fa-bars ms-1"></i>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-                        <li class="nav-item"><a class="nav-link" href="../Locador/index.html">Cadastro Locador</a></li>
-                        <li class="nav-item"><a class="nav-link" href="../Formulario/index.html">Cadastro Morador</a></li>
+                        <!-- <li class="nav-item"><a class="nav-link" href="locador.html">Cadastro Locador</a></li> -->
+                        <li class="nav-item"><a class="nav-link" href="../../index.php">Início</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../../feed/index-loc.php">Voltar</a></li>
                     </ul>
                 </div>
             </div>
-        </nav> -->
+        </nav>
     </header>
                     <!-- Até aqui finalizado -->
                     <body> 
@@ -161,7 +162,7 @@ $row2 = mysqli_fetch_row($result2);
                         
                                 <div class="col-md-12 mb-3" id="dd">
                                     <label for="descricao"><strong>Descrição </strong></label>
-                                       <textarea cols="50" rows="5" maxlength="500" input name="descricao" id="descricao"  class="form-control"  placeholder="Digite aqui a descrição do imóvel:"> <?php echo $row2[4]?></textarea> 
+                                       <textarea cols="50" rows="5" maxlength="500" input name="descricao" id="descricao"  class="form-control"  placeholder="Digite aqui a descrição do imóvel:"><?php echo $row2[4]?></textarea> 
                                     </div>
                                 </div>
                                 <div class="row">

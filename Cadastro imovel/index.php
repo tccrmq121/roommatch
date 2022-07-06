@@ -26,21 +26,7 @@
         <title>Cadastro-Imóvel</title>
     </head>
     <header>
-        <!-- <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
-            <div class="container"> -->
-                <!-- <a class="navbar-brand" href="#page-top"><img src="assets/img/navbar-logo.svg" alt="..." /></a> -->
-                <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    Menu
-                    <i class="fas fa-bars ms-1"></i>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-                        <li class="nav-item"><a class="nav-link" href="../Locador/index.html">Cadastro Locador</a></li>
-                        <li class="nav-item"><a class="nav-link" href="../Formulario/index.html">Cadastro Morador</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav> -->
+  
     </header>
 
     <body> 
@@ -231,26 +217,7 @@
 
                 
                     
-<!--                     
-                    <div class="campo">
-                        <div class="campo">
-                            <label for="descricao"><strong>Descrição </strong></label>
-                           <textarea cols="50" rows="5" maxlength="500" input name="descricao" id="descricao" required placeholder="Digite aqui a descrição do imóvel:"></textarea> 
-                        </div>
-                    </div>
-                   
-                    
-            
-                        <div class="campo">
-                            <label for="foto_perfil_quarto"><strong>Foto do Quarto </strong></label>
-                            <input type="file" name="foto-quarto" id="foto-quarto">
-                        </div>
-            
-                    <div class="campo">
-                        <div>
-                            <button class="botao" type="submit" onsubmit="">Concluído</button>  
-                        </div>
-                    </div> -->
+
 
                 
 
@@ -271,26 +238,6 @@
   
 
 
-    <!-- <footer>
-    <img src="img/logo.png" alt="logo">
-    <div>
-  
-    </div>
-    </div>
-            
-    </div>
-    </div>
-    </div>
-    </div>
-
-
-
-
-              
-     
-
-
-    </footer> -->
 
 </html>
 

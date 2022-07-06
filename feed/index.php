@@ -32,9 +32,12 @@ $result2 = mysqli_query($mysqli, $query2);
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
+       
         <title>RoomMatch</title>
         <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <link rel="icon" type="image/x-icon" href="favicon.ico" />
+        
+       
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
         <!-- Google fonts-->
@@ -213,7 +216,7 @@ $result2 = mysqli_query($mysqli, $query2);
 
                     //Calculo de idade
                     $dataNascimento = $row3[1];
-                    $data = new DateTime($dataNascimento );
+                    $data = new DateTime($dataNascimento);
                     $idade = $data->diff( new DateTime( date('Y-m-d') ) );
                     $idade = $idade->format( '%Y anos' );
 
@@ -245,21 +248,16 @@ $result2 = mysqli_query($mysqli, $query2);
                                 <div class='portfolio-caption-subheading'>Vaga para carro: $row2[1] </div>
                                 <hr>
                                 <div class='portfolio-caption-heading'>Dados Do Locador</div>
-                                <div class='portfolio-caption-subheading '><strong>Nome:</strong> $row3[0]</div>
-                                
-                                
+                                <div class='portfolio-caption-subheading '><strong>Nome:</strong> $row3[0]</div>                              
                                 <div class='portfolio-caption-subheading'><strong>Idade:</strong> $idade </div>
-                            
                                 <div class='portfolio-caption-subheading'><strong>Sexo:</strong> $sx</div>
                                 <div class='portfolio-caption-subheading'><strong>Fumante:</strong> $fum</div>
-                                
                                 <div class='portfolio-caption-subheading'> <strong>Tem Pet?:</strong> $tpet</div>
                                 <div class='portfolio-caption-subheading'><strong>Vegano: </strong> $vegan</div>
                                 <div class='portfolio-caption-subheading'><strong>Vegetariano:</strong> $veg </div>
                                 <div class='portfolio-caption-subheading '><strong>Faculdade:</strong><span style='text-transform: capitalize'> $fac</span></div>
                                 <div class='portfolio-caption-subheading'><strong>Trabalho:</strong><span style='text-transform: capitalize'> $row3[8] </span> </div>
                                 <div class='portfolio-caption-subheading'><strong>Sabe cozinhar? :</strong> $coz </div>
-                            
                                 <div class='portfolio-caption-subheading'><strong>Possui Carro:</strong> $car </div>
                                 <div class='portfolio-caption-subheading'><strong>Possui Moto:</strong> $mot </div>
                                 <a href='https://api.whatsapp.com/send/?phone=55$tel&text&app_absent=0' class='btn btn-primary btn-xl text-uppercase'    id='bb'   type='button'>

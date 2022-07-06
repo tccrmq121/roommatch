@@ -133,27 +133,27 @@ if(($_POST['tipoCad']) == 'cadLocador'){ //Coleta email e senha digitados
                     <p class="description description-second">Vamos começar a encontrar alguém para ser seu colega de quarto!</p>
                     <form class="form">
     
-                        <div class="form-group">
+                    <div class="form-group">
                             <div>
-                                <div  class="input-tipoCad"  value="cadMorador">
+                                <div  class="input-tipoCad"  value="cadMorador"> <!--Usuário Morador -->
                                 <label >
-                                    <a href="Locador/index.html"><i class="fas fa-2x fa-person-booth icon"></i></a>
-                                    <a href="Locador/index.html"><span class="icon">MORADOR</span></a>   
+                                    <a href="Formulario/index.html"><i class="fas fa-2x fa-person-booth icon"></i></a>
+                                    <a href="Formulario/index.html"><span class="icon">MORADOR</span></a>   
                                 </label>
                                 </div>
                             </div>
                         
                             <div>
-                                <div  class="input-tipoCad" value="cadLocador">
+                                <div  class="input-tipoCad" value="cadLocador"> <!--Usuário Locador -->
+                
                                 
                                 <label>
-                                    <a href="Formulario/index.html"><i class="fas fa-2x fa-door-open icon"></i></a>
-                                    <a href="Formulario/index.html"> <span class="icon">LOCADOR</span></a>
+                                    <a href="Locador/index.html"><i class="fas fa-2x fa-door-open icon"></i></a>
+                                    <a href="Locador/index.html"> <span class="icon">LOCADOR</span></a>
                                 </label>
                                 </div>
                             </div>
-                        </div>
-                                    
+                        </div>     
                     
                     </form>
                   
@@ -327,24 +327,7 @@ if(($_POST['tipoCad']) == 'cadLocador'){ //Coleta email e senha digitados
                 </form>
 
 
-                <!-- <h2 class="title title-second" id="locad">Locador cadastrado:</h2>
-                
-                <p class="description description-second">Acesse com seu E-mail!</p>
-                <form class="form">
-                
-                    <label class="label-input" for="">
-                        <i class="far fa-envelope icon-modify"></i>
-                        <input type="email" placeholder="E-mail">
-                    </label>
-                
-                    <label class="label-input" for="">
-                        <i class="fas fa-lock icon-modify"></i>
-                        <input type="password" placeholder="Senha">
-                    </label>
-                
-                    <a class="password" href="#">Esqueceu sua senha?</a>
-                    <button class="btn btn-second">Entrar</button>
-                </form> -->
+              
 
 
             </div><!-- second column -->

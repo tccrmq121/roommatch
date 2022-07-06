@@ -39,9 +39,7 @@ $row = mysqli_fetch_row($result);
              <!--Scripts Jquery para máscaras-->
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
-        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script> -->
-
+  
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
@@ -51,8 +49,23 @@ $row = mysqli_fetch_row($result);
         <title>Cadastro-Morador</title>
     </head>
     <header>
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+            <div class="container">
+                <!-- <a class="navbar-brand" href="#page-top"><img src="assets/img/navbar-logo.svg" alt="..." /></a> -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars ms-1"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                        <!-- <li class="nav-item"><a class="nav-link" href="locador.html">Cadastro Locador</a></li> -->
+                        <li class="nav-item"><a class="nav-link" href="../../index.php">Início</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../../feed/index.php">Voltar</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
     </header>
-
 
     <body> 
         <div class="container contact-pop">
@@ -252,8 +265,7 @@ $row = mysqli_fetch_row($result);
 
     
 <footer>
-    <!-- <img src="img/logo.png" alt="logo"> -->
-   
+ 
 </div>
          
 </div>

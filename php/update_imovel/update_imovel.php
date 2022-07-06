@@ -34,8 +34,7 @@ $row = mysqli_fetch_row($result);
         <!--Scripts Jquery para máscaras-->
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
-        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script> -->
+      
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
@@ -261,28 +260,7 @@ $row = mysqli_fetch_row($result);
 
                 
                     
-<!--                     
-                    <div class="campo">
-                        <div class="campo">
-                            <label for="descricao"><strong>Descrição </strong></label>
-                           <textarea cols="50" rows="5" maxlength="500" input name="descricao" id="descricao" required placeholder="Digite aqui a descrição do imóvel:"></textarea> 
-                        </div>
-                    </div>
-                   
-                    
-            
-                        <div class="campo">
-                            <label for="foto_perfil_quarto"><strong>Foto do Quarto </strong></label>
-                            <input type="file" name="foto-quarto" id="foto-quarto">
-                        </div>
-            
-                    <div class="campo">
-                        <div>
-                            <button class="botao" type="submit" onsubmit="">Concluído</button>  
-                        </div>
-                    </div> -->
 
-                
 
                 
             
@@ -299,27 +277,5 @@ $row = mysqli_fetch_row($result);
    
 
   
-
-
-    <!-- <footer>
-    <img src="img/logo.png" alt="logo">
-    <div>
-  
-    </div>
-    </div>
-            
-    </div>
-    </div>
-    </div>
-    </div>
-
-
-
-
-              
-     
-
-
-    </footer> -->
 
 </html>
